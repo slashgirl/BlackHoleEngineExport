@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" ?>
+<RealBimOcxCfg LogLevel ="0" AntiAliasing ="1" UseEngineCache ="1" MaxMemSize="2500000000" MaxCanLoadMemSize="2480000000" SceNum="9" DefaultSceID="1">
+
+  <SceCfg ID="0"
+      SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+      SceInfo_MainSGFileName="!(DefaultResRootDir)\res_fengning\total.scenegroup"
+      SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_fn01.camera"
+      SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+      SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+      SceInfo_InitDirectLClr="0.8 0.8 0.8"
+      SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+      SceInfo_CSMSplitNum="4"
+      SceInfo_SMTexSize="1024"
+      SceInfo_ShadowMaxDist="100.0"
+      SceInfo_DepthBiasRatio="0.004"
+      SceInfo_FilterKernelSize="3.0"
+      SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+      SceInfo_Capacity="10.0"
+      SceInfo_ClearRatio="0.25"
+      SceInfo_InitCamLoc ="0"
+      SceInfo_DefaultBackgroundEnable="0"
+      SceInfo_InitCamZNear="0.5"
+      SceInfo_InitCamZFar="20000.0"
+      SceInfo_InitCamPos="-100.063385 1252.890380 886.817810"
+      SceInfo_InitCamRotate="-0.23655950 -0.22604215 0.056692597 -0.94325525"
+      SceInfo_bbTotalSce_Min="0.0, 953.450012, 0.0"
+      SceInfo_bbTotalSce_Max="0.0, 953.450012, 0.0"
+        
+      uShadowQuality="3"
+      uMaxMemSize="800000000"
+      uMaxCanLoadMemSize="760000000"
+        
+      CamParamViewer_MoveCoef ="5.0"
+      CamParamViewer_RotateCoef ="0.00366519"
+        
+      CamParamDragMove_DefaultPlaneH="940.0"
+      CamParamDragMove_MaxDragAngle="1.4835298"
+      CamParamDragMove_MaxDragHoriDist ="20000.0"
+      CamParamDragMove_FadeoutTime ="2.0"
+        
+      CamParamRotAround_RotateCoef ="0.002617993"
+        
+      CamParamForwardr_MinAbsCoef ="0.5"
+      CamParamForward_MaxAbsCoef ="200.0"
+      CamParamForward_MoveCoef ="0.5"
+        
+      CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+
+  <SceCfg ID="1"
+      SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+      SceInfo_MainSGFileName="!(DefaultResRootDir)\res_itcenter\total.scenegroup"
+      SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_itcenter01.camera"
+      SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+      SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+      SceInfo_InitDirectLClr="0.8 0.8 0.8"
+      SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+      SceInfo_CSMSplitNum="4"
+      SceInfo_SMTexSize="1024"
+      SceInfo_ShadowMaxDist="100.0"
+      SceInfo_DepthBiasRatio="0.004"
+      SceInfo_FilterKernelSize="3.0"           
+      SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+      SceInfo_Capacity="10.0"
+      SceInfo_ClearRatio="0.25"
+      SceInfo_InitCamLoc ="0"
+      SceInfo_DefaultBackgroundEnable="0"
+      SceInfo_InitCamZNear="0.1"
+      SceInfo_InitCamZFar="2000.0"
+      SceInfo_InitCamPos="75.313820799897996 75.065374639087139 -126.51929925698821"
+      SceInfo_InitCamRotate="0.11679447 -0.15343449 0.018262725 0.98106229"
+      SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+      SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+      uShadowQuality="-1"
+      uMaxMemSize="800000000"
+      uMaxCanLoadMemSize="760000000"
+        
+      CamParamViewer_MoveCoef ="5.0"
+      CamParamViewer_RotateCoef ="0.00366519"
+        
+      CamParamDragMove_DefaultPlaneH="-20.0"
+      CamParamDragMove_MaxDragAngle="1.4835298"
+      CamParamDragMove_MaxDragHoriDist ="2000.0"
+      CamParamDragMove_FadeoutTime ="2.0"
+        
+      CamParamRotAround_RotateCoef ="0.002617993"
+        
+      CamParamForwardr_MinAbsCoef ="0.5"
+      CamParamForward_MaxAbsCoef ="200.0"
+      CamParamForward_MoveCoef ="0.5"
+        
+      CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+  <SceCfg ID="2"
+    SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+    SceInfo_MainSGFileName="!(DefaultResRootDir)\res_glodon\total.scenegroup"
+    SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_glodon01.camera"
+    SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+    SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+    SceInfo_InitDirectLClr="0.7 0.7 0.7"
+    SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+    SceInfo_CSMSplitNum="4"
+    SceInfo_SMTexSize="1024"
+    SceInfo_ShadowMaxDist="100.0"
+    SceInfo_DepthBiasRatio="0.004"
+    SceInfo_FilterKernelSize="3.0" 
+    SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+    SceInfo_Capacity="10.0"
+    SceInfo_ClearRatio="0.25"
+    SceInfo_InitCamLoc ="0"
+    SceInfo_DefaultBackgroundEnable="0"
+    SceInfo_InitCamZNear="0.2"
+    SceInfo_InitCamZFar="1000.0"
+    SceInfo_InitCamPos="75.313820799897996  75.065374639087139  -126.51929925698821"
+    SceInfo_InitCamRotate="0.11679447  -0.15343449  0.018262725  0.98106229"
+    SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+    SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+    uShadowQuality="3"
+    uMaxMemSize="800000000"
+    uMaxCanLoadMemSize="760000000"
+        
+    CamParamViewer_MoveCoef ="5.0"
+    CamParamViewer_RotateCoef ="0.00366519"
+        
+    CamParamDragMove_DefaultPlaneH="-20.0"
+    CamParamDragMove_MaxDragAngle="1.4835298"
+    CamParamDragMove_MaxDragHoriDist ="1000.0"
+    CamParamDragMove_FadeoutTime ="2.0"
+        
+    CamParamRotAround_RotateCoef ="0.002617993"
+        
+    CamParamForwardr_MinAbsCoef ="0.5"
+    CamParamForward_MaxAbsCoef ="200.0"
+    CamParamForward_MoveCoef ="0.5"
+        
+    CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+
+
+  <SceCfg ID="3"
+    SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+    SceInfo_MainSGFileName="!(DefaultResRootDir)\res_tongzhou\total.scenegroup"
+    SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_tongzhou01.camera"
+    SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+    SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+    SceInfo_InitDirectLClr="0.8 0.8 0.8"
+    SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+    SceInfo_CSMSplitNum="4"
+    SceInfo_SMTexSize="1024"
+    SceInfo_ShadowMaxDist="100.0"
+    SceInfo_DepthBiasRatio="0.004"
+    SceInfo_FilterKernelSize="3.0"    
+    SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+    SceInfo_Capacity="10.0"
+    SceInfo_ClearRatio="0.25"
+    SceInfo_InitCamLoc ="0"
+    SceInfo_DefaultBackgroundEnable="0"
+    SceInfo_InitCamZNear="0.5"
+    SceInfo_InitCamZFar="10000.0"
+    SceInfo_InitCamPos="0.0 0.0 0.0"
+    SceInfo_InitCamRotate="0.0 0.0 0.0 1.0"
+    SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+    SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+    uShadowQuality="3"
+    uMaxMemSize="800000000"
+    uMaxCanLoadMemSize="760000000"
+        
+    CamParamViewer_MoveCoef ="5.0"
+    CamParamViewer_RotateCoef ="0.00366519"
+        
+    CamParamDragMove_DefaultPlaneH="0.0"
+    CamParamDragMove_MaxDragAngle="1.4835298"
+    CamParamDragMove_MaxDragHoriDist ="10000.0"
+    CamParamDragMove_FadeoutTime ="2.0"
+        
+    CamParamRotAround_RotateCoef ="0.002617993"
+        
+    CamParamForwardr_MinAbsCoef ="0.5"
+    CamParamForward_MaxAbsCoef ="200.0"
+    CamParamForward_MoveCoef ="0.5"
+        
+    CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+
+  <SceCfg ID="4"
+  SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+  SceInfo_MainSGFileName="!(DefaultResRootDir)\res_tongzhou_02\total.scenegroup"
+  SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_tongzhou01.camera"
+  SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+  SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+  SceInfo_InitDirectLClr="0.8 0.8 0.8"
+  SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+  SceInfo_CSMSplitNum="4"
+  SceInfo_SMTexSize="1024"
+  SceInfo_ShadowMaxDist="100.0"
+  SceInfo_DepthBiasRatio="0.004"
+  SceInfo_FilterKernelSize="3.0"    
+  SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+  SceInfo_Capacity="10.0"
+  SceInfo_ClearRatio="0.25"
+  SceInfo_InitCamLoc ="0"
+  SceInfo_DefaultBackgroundEnable="0"
+  SceInfo_InitCamZNear="0.5"
+  SceInfo_InitCamZFar="10000.0"
+  SceInfo_InitCamPos="0.0 0.0 0.0"
+  SceInfo_InitCamRotate="0.0 0.0 0.0 1.0"
+  SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+  SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+  uShadowQuality="3"
+  uMaxMemSize="800000000"
+  uMaxCanLoadMemSize="760000000"
+        
+  CamParamViewer_MoveCoef ="5.0"
+  CamParamViewer_RotateCoef ="0.00366519"
+        
+  CamParamDragMove_DefaultPlaneH="0.0"
+  CamParamDragMove_MaxDragAngle="1.4835298"
+  CamParamDragMove_MaxDragHoriDist ="10000.0"
+  CamParamDragMove_FadeoutTime ="2.0"
+        
+  CamParamRotAround_RotateCoef ="0.002617993"
+        
+  CamParamForwardr_MinAbsCoef ="0.5"
+  CamParamForward_MaxAbsCoef ="200.0"
+  CamParamForward_MoveCoef ="0.5"
+        
+  CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+
+
+  <SceCfg ID="5"
+SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+SceInfo_MainSGFileName="!(DefaultResRootDir)\res_plane\total.scenegroup"
+SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_plane01.camera"
+SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+SceInfo_InitDirectLClr="0.7 0.7 0.7"
+SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+SceInfo_CSMSplitNum="5"
+SceInfo_SMTexSize="2048"
+SceInfo_ShadowMaxDist="500.0"
+SceInfo_DepthBiasRatio="0.004"
+SceInfo_FilterKernelSize="3.0"          
+SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+SceInfo_Capacity="10.0"
+SceInfo_ClearRatio="0.25"
+SceInfo_InitCamLoc ="0"
+SceInfo_DefaultBackgroundEnable="0"
+SceInfo_InitCamZNear="0.2"
+SceInfo_InitCamZFar="5000.0"
+SceInfo_InitCamPos="75.313820799897996 75.065374639087139  -126.51929925698821"
+SceInfo_InitCamRotate="0.11679447  -0.15343449  0.018262725  0.98106229"
+SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+uShadowQuality="-1"
+uMaxMemSize="1200000000"
+uMaxCanLoadMemSize="1050000000"
+        
+CamParamViewer_MoveCoef ="5.0"
+CamParamViewer_RotateCoef ="0.00366519"
+        
+CamParamDragMove_DefaultPlaneH="-20.0"
+CamParamDragMove_MaxDragAngle="1.4835298"
+CamParamDragMove_MaxDragHoriDist ="5000.0"
+CamParamDragMove_FadeoutTime ="2.0"
+        
+CamParamRotAround_RotateCoef ="0.002617993"
+        
+CamParamForwardr_MinAbsCoef ="0.5"
+CamParamForward_MaxAbsCoef ="200.0"
+CamParamForward_MoveCoef ="0.5"
+        
+CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+
+
+
+  <SceCfg ID="6"
+SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+SceInfo_MainSGFileName="!(DefaultResRootDir)\res_tongji\total.scenegroup"
+SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_tongji01.camera"
+SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+SceInfo_InitAmbientLLowerClr="0.2 0.2 0.2"
+SceInfo_InitDirectLClr="0.8 0.8 0.8"
+SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+SceInfo_CSMSplitNum="4"
+SceInfo_SMTexSize="1024"
+SceInfo_ShadowMaxDist="50.0"
+SceInfo_DepthBiasRatio="0.004"
+SceInfo_FilterKernelSize="3.0"
+SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+SceInfo_Capacity="10.0"
+SceInfo_ClearRatio="0.25"
+SceInfo_InitCamLoc ="0"
+SceInfo_DefaultBackgroundEnable="0"
+SceInfo_InitCamZNear="0.1"
+SceInfo_InitCamZFar="2000.0"
+SceInfo_InitCamPos="75.313820799897996 75.065374639087139  -126.51929925698821"
+SceInfo_InitCamRotate="0.11679447  -0.15343449  0.018262725  0.98106229"
+SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+uShadowQuality="3"
+uMaxMemSize="600000000"
+uMaxCanLoadMemSize="550000000"
+        
+CamParamViewer_MoveCoef ="5.0"
+CamParamViewer_RotateCoef ="0.00366519"
+        
+CamParamDragMove_DefaultPlaneH="-10.0"
+CamParamDragMove_MaxDragAngle="1.4835298"
+CamParamDragMove_MaxDragHoriDist ="2000.0"
+CamParamDragMove_FadeoutTime ="2.0"
+        
+CamParamRotAround_RotateCoef ="0.002617993"
+        
+CamParamForwardr_MinAbsCoef ="0.5"
+CamParamForward_MaxAbsCoef ="200.0"
+CamParamForward_MoveCoef ="0.5"
+        
+CamParamDragView_DefaultDragDist ="500.0"
+    />
+
+
+
+  <SceCfg ID="7"
+SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+SceInfo_MainSGFileName="!(DefaultResRootDir)\res_bridge\total.scenegroup"
+SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_bridge02.camera"
+SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+SceInfo_InitAmbientLLowerClr="0.1 0.1 0.1"
+SceInfo_InitDirectLClr="0.8 0.8 0.8"
+SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+SceInfo_CSMSplitNum="4"
+SceInfo_SMTexSize="1024"
+SceInfo_ShadowMaxDist="600.0"
+SceInfo_DepthBiasRatio="0.004"
+SceInfo_FilterKernelSize="3.0"
+SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+SceInfo_Capacity="10.0"
+SceInfo_ClearRatio="0.25"
+SceInfo_InitCamLoc ="0"
+SceInfo_DefaultBackgroundEnable="1"
+SceInfo_InitCamZNear="0.1"
+SceInfo_InitCamZFar="2000.0"
+SceInfo_InitCamPos="-768.199036 -86.050011 -19.376944"
+SceInfo_InitCamRotate="0.0 0.0 0.0 1.0"
+SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+uShadowQuality="-1"
+uMaxMemSize="600000000"
+uMaxCanLoadMemSize="550000000"
+        
+CamParamViewer_MoveCoef ="5.0"
+CamParamViewer_RotateCoef ="0.00366519"
+        
+CamParamDragMove_DefaultPlaneH="0.0"
+CamParamDragMove_MaxDragAngle="1.4835298"
+CamParamDragMove_MaxDragHoriDist ="1000.0"
+CamParamDragMove_FadeoutTime ="2.0"
+        
+CamParamRotAround_RotateCoef ="0.002617993"
+        
+CamParamForwardr_MinAbsCoef ="0.5"
+CamParamForward_MaxAbsCoef ="20.0"
+CamParamForward_MoveCoef ="0.5"
+        
+CamParamDragView_DefaultDragDist ="500.0"
+    />
+
+
+  <SceCfg ID="8"
+SceInfo_DefaultResRootDir="http://116.236.104.30:8008/default.aspx?dir=url_res02&amp;path="
+SceInfo_MainSGFileName="!(DefaultResRootDir)\\res_quning\\total.scenegroup"
+SceInfo_MainCamFileName="!(ModuleDir)\AppRes\Camera\camera01_quning02.camera"
+SceInfo_InitAmbientLUpperClr="0.4 0.4 0.4"
+SceInfo_InitAmbientLLowerClr="0.1 0.1 0.1"
+SceInfo_InitDirectLClr="0.8 0.8 0.8"
+SceInfo_InitDirectLDir="0.59215283 -0.50000012 0.63194525"
+SceInfo_CSMSplitNum="4"
+SceInfo_SMTexSize="1024"
+SceInfo_ShadowMaxDist="100.0"
+SceInfo_DepthBiasRatio="0.004"
+SceInfo_FilterKernelSize="3.0"
+SceInfo_URLResCachePath="!(ModuleDir)\AppRes\WebCache\url_res02\"
+SceInfo_Capacity="10.0"
+SceInfo_ClearRatio="0.25"
+SceInfo_InitCamLoc ="0"
+SceInfo_DefaultBackgroundEnable="0"
+SceInfo_InitCamZNear="0.5"
+SceInfo_InitCamZFar="40000.0"
+SceInfo_InitCamPos="0 0 0"
+SceInfo_InitCamRotate="0.0 0.0 0.0 1.0"
+SceInfo_bbTotalSce_Min="0.0, 0.0, 0.0"
+SceInfo_bbTotalSce_Max="0.0, 0.0, 0.0"
+        
+uShadowQuality="3"
+uMaxMemSize="600000000"
+uMaxCanLoadMemSize="550000000"
+        
+CamParamViewer_MoveCoef ="5.0"
+CamParamViewer_RotateCoef ="0.00366519"
+        
+CamParamDragMove_DefaultPlaneH="0.0"
+CamParamDragMove_MaxDragAngle="1.4835298"
+CamParamDragMove_MaxDragHoriDist ="40000.0"
+CamParamDragMove_FadeoutTime ="2.0"
+        
+CamParamRotAround_RotateCoef ="0.002617993"
+        
+CamParamForwardr_MinAbsCoef ="0.5"
+CamParamForward_MaxAbsCoef ="20.0"
+CamParamForward_MoveCoef ="0.5"
+        
+CamParamDragView_DefaultDragDist ="50.0"
+    />
+
+
+
+</RealBimOcxCfg>

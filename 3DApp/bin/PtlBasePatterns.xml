@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+ <EmitterParams >
+    <Params PatternID="基础水柱"
+            RenderOrder="50" 
+            Force_Gol="true" Force_Type="TYPE_DIR" Force_InMem="0.0 -9.9 0.0 0.0" Force_Viscous="0.0"
+            BlendLen ="4.0" 
+            AlphaTexV="4" 
+            VirCamEnable ="false" 
+            RotSpeed="0.0" 
+            Hole_PosRotate="0.0 1.57 0.0" Hole_PosTrans="0.0 0.0 0.0" Hole_VelRotate="0.0 1.1775 0.0"
+            Hole_bbEmitAreaMin="-3.0 0.0 -1.0"  Hole_bbEmitAreaMax ="3.0 0.0 5.0"
+            Hole_ExpectVel ="40.0" Hole_VelDelta ="1.0" cHole_MaxVelSlantAngle ="0.0314"          
+            EmitSpeed ="40.0"
+            EmitLifetime ="4.0"
+            MaxPtlSize ="40.0"
+            SizeInfo="0.01 1.0 1.0 40.0"
+            PtlVelMode ="true"     
+            VelDistort ="0.9"
+            PtlTex ="!(MAC1)!(CurDir)..\picture\water_0.dds!(MAC2)"
+            PtlTexelAdjust ="0.608 -0.6 1.289"
+            PtlBaseClr="0.729 0.647 0.486"
+            TotalAlpha ="1.0"
+            TotalLum ="1.2"
+            ></Params>
+
+   <Params PatternID="基础水雾"
+            RenderOrder="25"
+            Force_Gol="true" Force_Type="TYPE_DIR" Force_InMem="0.0 1.0 0.0 0.0" Force_Viscous="0.0"
+            BlendLen ="15.0"
+            AlphaTexV="4"
+            VirCamEnable ="false"
+            RotSpeed="0.0"
+            Hole_PosRotate="0.0 1.57 0.0" Hole_PosTrans="0.0 0.0 0.0" Hole_VelRotate="0.0 1.1775 0.0"
+            Hole_bbEmitAreaMin="-3.0 0.0 -1.0"  Hole_bbEmitAreaMax ="3.0 0.0 5.0"
+            Hole_ExpectVel ="25.0" Hole_VelDelta ="2.5" cHole_MaxVelSlantAngle ="0.785"
+            EmitSpeed ="10.0"
+            EmitLifetime ="4.0"
+            MaxPtlSize ="150.0"
+            SizeInfo="0.01 1.0 1.0 150.0"
+            PtlVelMode ="false"
+            VelDistort ="5.4"
+            PtlTex ="!(MAC1)!(CurDir)..\picture\wsmoke_0.dds!(MAC2)"
+            PtlTexelAdjust ="0.49 0.0 1.0"
+            PtlBaseClr="0.729 0.647 0.486"
+            TotalAlpha ="1.0"
+            TotalLum ="1.0"
+            ></Params>
+            
+ </EmitterParams>
+
+ 
