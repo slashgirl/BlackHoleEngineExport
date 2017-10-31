@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>BlackHole Engine</title>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="keywords" content="BIM协同管理系统引擎">
+    <meta name="description" content="BIM协同管理系统引擎">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            overflow: auto;
+            background-color: transparent;
+        }
+
+        .gray-bg {
+            background-color: white;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .div1 {
+            z-index: -10;
+        }
+
+        #page-wrapper {
+            margin: 0 0 0 220px;
+            position: inherit;
+            min-height: 400px;
+            height: 100%;
+        }
+
+        .col-md-6 {
+            width: 100%;
+        }
+
+        .file .file-name {
+            text-align: center;
+            cursor: pointer;
+        }
+        .objpos{
+            margin-top: 100px;
+            margin-left: 100px;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <object id="RealBimOcx" classid="CLSID:2CD7E1BE-10B8-4A1C-B908-4FB7D4FD4ABD"  codebase="../assets/BHsetup.CAB#version=1,0,0,344" class="objpos" width="1px" height="1px" onpageshow = "show()">
+    </object>
+    <div id="wrapper">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header" style="padding-top: 10px;padding-left: 20px;">
+                    <span style="font-size:15pt; color:White;">
+                        <img alt="image" src="img/slogen.png" style="height:25px;" />
+                        <p style="float:right;margin-left: 5px;">BlackHole Engine</p>
+                    </span>
+                </div>
+            </nav>
+        </div>
+        <div id="projectContentDiv">
+        	<!--new line-->
+            <div class="col-md-6" style="background-color: #92CDDC">
+                <div style="margin: 5px">
+                    <p1 style="color: white;">水利工程</p1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content" style="padding-left: 0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0102.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_kehala" onmousedown="getProjID(event)">克哈拉水电站</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--new line-->
+            <div class="col-md-6" style="background-color: #92CDDC">
+                <div style="margin: 5px">
+                    <p1 style="color: white;">市政工程</p1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content" style="padding-left: 0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0201.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_qdplane_04" onmousedown="getProjID(event)">机场</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0202.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_xuzhou02" onmousedown="getProjID(event)">徐州迎宾大道</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0203.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_zhuyuan" onmousedown="getProjID(event)">竹园水厂</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--new line-->
+            <div class="col-md-6" style="background-color: #92CDDC">
+                <div style="margin: 5px">
+                    <p1 style="color: white;">道路与桥梁</p1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content" style="padding-left: 0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0301.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_erhangbridge" onmousedown="getProjID(event)">中交二航局桥梁</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0302.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_kunyanglu" onmousedown="getProjID(event)">昆阳路</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0303.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_luzheng01" onmousedown="getProjID(event)">赵家沟（倾斜摄影）</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0304.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_quning03" onmousedown="getProjID(event)">衢宁铁路</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0305.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_yanchengqiao" onmousedown="getProjID(event)">盐城桥</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0306.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_zhaojiagou" onmousedown="getProjID(event)">赵家沟（地形）</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--new line-->
+            <div class="col-md-6" style="background-color: #92CDDC">
+                <div style="margin: 5px">
+                    <p1 style="color: white;">地铁工程</p1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content" style="padding-left: 0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0401.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_dflz" onmousedown="getProjID(event)">东方绿洲</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0402.jpg" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_dixiayuan" onmousedown="getProjID(event)">地下院</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0403.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_ntdt" onmousedown="getProjID(event)">地铁27个站</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0404.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_shanghaiditie17" onmousedown="getProjID(event)">上海地铁17号线</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--new line-->
+            <div class="col-md-6" style="background-color: #92CDDC">
+                <div style="margin: 5px">
+                    <p1 style="color: white;">倾斜摄影</p1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content" style="padding-left: 0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0501.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_nantong02" onmousedown="getProjID(event)">倾斜摄影</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--new line-->
+            <div class="col-md-6" style="background-color: #92CDDC">
+                <div style="margin: 5px">
+                    <p1 style="color: white;">测试项目</p1>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content" style="padding-left: 0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0601.png" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_car01" onmousedown="getProjID(event)">汽车零件</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0602.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_shangkanyuan" onmousedown="getProjID(event)">上勘院</div>
+                                </div>
+                            </div>
+                            <div class="file-box">
+                                <div class="file">
+                                    <div class="image">
+                                        <img src="img/pro/0701.PNG" alt="image" class="img-responsive">
+                                    </div>
+                                    <div class="file-name" id="res_shunyuantest" onmousedown="getProjID(event)">水上乐园</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" style="padding:5px 20px;position:fixed">
+            <div class="pull-right" style="font-size:12px">
+                By：上海秉匠信息科技有限公司
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 项目页，点击传递项目名称 -->
+    <script language="javascript"   for="RealBimOcx" EVENT="OnRealBimOcxInited()" type="text/javascript">
+        ocxinited = true;
+    </script>
+    <script>
+        function show(){
+            ocxinited =false;
+        }
+        function getProjID(event){
+            x=event.target; 
+            projectId = x.id; 
+
+            if(ocxinited) {
+                RealBimOcx.SetSystemCacheInfo("ProjectName",projectId);
+                window.open("login.html");
+            }else{
+                alert("引擎控件注册失败！");
+            }
+        } 
+    </script>
+</body>
+</html>
+
+
+

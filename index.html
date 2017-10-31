@@ -1,0 +1,405 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BlackHole Engine</title>
+</head>
+<body>
+    <object id="RealBimOcx" classid="CLSID:2CD7E1BE-10B8-4A1C-B908-4FB7D4FD4ABD"  width="100%" height="88%">
+    </object>
+    <div>
+        <!-- UI按钮  -->
+        <div style="margin: 2px;padding-top: 5px;">
+            <div style="margin: 2px; padding:2px; background-color: #AFEEEE;">
+                本地访问模型：
+                <input id="localpath" type="text" style="width: 300px;height: 20px;" placeholder="请输入资源地址：例 D:\AppTest\URL_res02"/>
+                <input id="localpathname" type="text" style="width: 150px;height: 20px;" placeholder="资源名称：例 res_dflz"/>
+                <input id="localmodelname" type="button" style="background-color: #20B2AA;font-size: 12px;font-weight: bold;cursor: pointer;height: 20px;margin-left: 10px;" value="确定" onclick="sellocalmodel()"/>
+                <input id="vercmpenable" type="button" style="background-color: #20B2AA;font-size: 12px;font-weight: bold;cursor: pointer;height: 20px;margin-left: 30px;color: #ffffff;" value="查看版本对比" onclick="vercmpenable()"/>
+                <input id="vercmpdisable" type="button" style="background-color: #20B2AA;font-size: 12px;font-weight: bold;cursor: pointer;height: 20px;color: #ffffff;margin-left: 10px;margin-right: 30px;" value="关闭版本对比" onclick="vercmpdisable()"/>
+            </div>
+            
+            <div style="margin: 2px; padding:2px; background-color: #D1E7F6;">
+                <input id="lbtn" type="checkbox" checked="checked"  onclick="return lbtn_onclick()"/>显示控件左上角UI
+                <input id="rbtn" type="checkbox" onclick="return rbtn_onclick()"/>显示控件右上角UI
+                <!-- 标签/锚点操作相关按钮 -->
+                <input id="addtagbtn" type="button" style="background-color: #9ACCF9;font-size: 12px;margin-left: 20px;cursor: pointer;border: 0;padding: 2px;" value="添加标签" onclick="addTag()"/>
+                <input id="deltagbtn" type="button" style="background-color: #9ACCF9;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="删除当前标签" onclick="delTag()"/>
+                <input id="delalltagbtn" type="button" style="background-color: #9ACCF9;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="删除所有标签" onclick="delAllTag()"/>
+                <input id="addancbtn" type="button" style="background-color: #cddc39;font-size: 12px;margin-left: 20px;cursor: pointer;border: 0;padding: 2px;" value="添加锚点" onclick="addAnc()"/>
+                <input id="delancbtn" type="button" style="background-color: #cddc39;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="删除当前锚点" onclick="delAnc()"/>
+                <input id="delallancbtn" type="button" style="background-color: #cddc39;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="删除所有锚点" onclick="delAllAnc()"/>
+                <!-- 获取剖切范围内构建的ID -->
+                <input id="saveid" type="button" style="background-color: #4caf50;font-size: 12px;margin-left: 20px;margin-right:20px;cursor: pointer;border: 0;padding: 2px;" value="保存剖切结果" onclick="saveID()"/>
+                <!-- 显示当前选取构件的ID -->
+                当前选取构件的ID：<input id="selmodelID" type="text" style="width: 120px;"/>
+            </div>
+        </div>
+        <!-- 快照/标注相关 -->
+        <div style="margin: 2px; padding:2px; background-color: #F0F0F0;">
+            <input id="Checkbox1" type="checkbox" checked="checked"/>屏幕截图中去掉系统UI
+            <input id="CreateSnapshot" type="button" style="background-color: #ffeb3b;font-size: 12px;margin-left: 20px;cursor: pointer;border: 0;padding: 2px;" value="创建屏幕快照" onclick="return CreateSnapshot_onclick()" />
+            <input id="ShowMark" type="button" style="background-color: #ffeb3b;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="显示已保存快照" onclick="return ShowSnapShot_onclick()" />
+
+            <input id="CapText" type="text" style="margin-left: 20px;width: 300px;" placeholder="1.请先点击控件标注按钮，在此输入标注文字"/>
+            <input id="SubmitText" type="button" style="background-color: #9ACCF9;font-size: 12px;cursor: pointer;border: 0;padding: 2px;" value="2.提交标注文字" onclick="return SubmitText_onclick()" />
+            <input id="SubmitCapture" type="button"  style="background-color: #9ACCF9;font-size: 12px;margin-left: 5px;cursor: pointer;border: 0;padding: 2px;" value="3.创建标注" onclick="return SubmitMarkerData()" />
+            <input id="ShowMark" type="button" style="background-color: #9ACCF9;font-size: 12px;margin-left: 5px;cursor: pointer;border: 0;padding: 2px;" value="4.显示已保存标注" onclick="return ShowMark_onclick()" />
+            <!-- 视频录制相关  -->
+            <input id="beginvideo" type="button" style="background-color: #4caf50;font-size: 12px;margin-left: 20px;cursor: pointer;border: 0;padding: 2px;" value="开始录制视频" onclick="beginVideo()"/>
+            <input id="pausevideo" type="button" style="background-color: #4caf50;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="暂停录制" onclick="pauseVideo()"/>
+            <input id="endvideo" type="button" style="background-color: #4caf50;font-size: 12px;margin-left: 10px;cursor: pointer;border: 0;padding: 2px;" value="结束录制" onclick="endVideo()"/>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">
+        document.onmousewheel = function(){
+            return false;
+        }
+
+        document.onkeydown=function(event){
+          var e = event || window.event || arguments.callee.caller.arguments[0];
+          if(e && e.keyCode==17){ 
+                ctrlsel = true;
+           }
+        }
+
+        document.onkeyup=function(event){
+          var e = event || window.event || arguments.callee.caller.arguments[0];
+          if(e && e.keyCode==17){ 
+                ctrlsel = false;
+           }
+        }
+
+        function sellocalmodel() {
+            selpath = document.getElementById("localpath").value;
+            selname = document.getElementById("localpathname").value;
+
+            if(selModel){
+                RealBimOcx.SwitchBIMSceneSimple(selpath + "\\",selname);
+                // 2.设置模型版本信息
+                RealBimOcx.SetSceVersionInfo(100, -1);
+
+                vercmp = false;
+            }
+        }
+
+        function vercmpenable(){
+            if(selname == "res_versioncmp01"){
+                RealBimOcx.SetSceVersionInfo(100, 200);
+                vercmp = true;
+            }else{
+                alert("此模型不支持查看版本对比！")
+            }
+        }
+
+        function vercmpdisable(){
+            if(selname == "res_versioncmp01"){
+                RealBimOcx.SetSceVersionInfo(100, -1);
+                vercmp = false;
+            }
+        }
+
+        // 创建屏幕快照,并根据 bDisableFuncUI 决定是否在创建快照时隐藏系统UI
+        function CreateSnapshot_onclick() {
+            snapShotPath = RealBimOcx.GetResCanonicalFullPath("!(RealBIMTempFileCache)\\Snapshot\\");
+            alert("是否保存快照到文件夹：" + snapShotPath + " ?")
+            var ctrl = document.getElementById("Checkbox1");
+            var bDisableFuncUI = true;
+            if (ctrl.checked == true) {
+                bDisableFuncUI = true;
+            } else {
+                bDisableFuncUI = false;
+            }
+            RealBimOcx.CreateSnapShot(snapShotPath+"SnapShot01.jpg", 400, 300, snapShotPath+"Capture01.dat", bDisableFuncUI);
+
+            // RealBimOcx.CreateSnapShootInMem(true, 400, 300,true, bDisableFuncUI);
+        }
+
+        // 显示已保存的快照
+        function ShowSnapShot_onclick() {
+            RealBimOcx.ShowSnapshotOrMarker(snapShotPath+"Capture01.dat");
+        }
+
+        // 提交创建的标注
+        function SubmitMarkerData(){
+            markerDataPath = RealBimOcx.GetResCanonicalFullPath("!(RealBIMTempFileCache)\\Markerdata\\");
+            alert("是否保存标注到文件夹：" + markerDataPath + " ?")
+            var ctrl = document.getElementById("Checkbox1");
+            var bDisableFuncUI = true;
+            if (ctrl.checked == true) {bDisableFuncUI = true;} 
+            else { bDisableFuncUI = false;}
+            RealBimOcx.CreateMarkerEnd(markerDataPath+"MarkerPic01.jpg", 400, 300, markerDataPath+"Marker01.dat", bDisableFuncUI);
+        }
+
+        // 提交输入的标注文字内容
+        function SubmitText_onclick() {
+            var submitText = document.getElementById("CapText");
+            RealBimOcx.SubmitMarkerText(submitText.value);
+        }
+
+        // 显示已保存的标注数据
+        function ShowMark_onclick() {
+            RealBimOcx.ShowSnapshotOrMarker(markerDataPath+"Marker01.dat");
+        }
+
+        // 控件左/右上角UI显隐
+        function lbtn_onclick() {
+            var ctrl = document.getElementById("lbtn");
+            if (ctrl.checked == true) {
+                RealBimOcx.SetSysUIRgnVisible("lt", true);
+            } else {
+                RealBimOcx.SetSysUIRgnVisible("lt", false);
+            }
+        }
+
+        function rbtn_onclick() {
+            var ctrl = document.getElementById("rbtn");
+            if (ctrl.checked == true) {
+                RealBimOcx.SetSysUIRgnVisible("rt", true);
+            } else {
+                RealBimOcx.SetSysUIRgnVisible("rt", false);
+            }
+        }
+
+        // 标签和锚点相关
+        function addTag() {
+            curState = addTag;
+            strPosArr = [];
+        }
+        function addAnc() {
+            curState = addAnc;
+            strPosArr = [];
+        }
+        function delAnc(){
+            curState = delAnc;
+        }
+        function delTag(){
+            curState = delAnc;
+        }
+        function delAllTag(){
+            // 删除所有标签
+            RealBimOcx.DelAllTags();
+        }
+
+        function delAllAnc(){
+            // 删除全部锚点
+            RealBimOcx.DelAllAnchors();
+        }
+
+
+    </script>
+
+
+    <!-- 控件初始化 -->
+    <script language="javascript"   for="RealBimOcx" EVENT="OnRealBimOcxInited()" type="text/javascript">
+        vercmp = false;
+        curState = "";
+        selModel = true;
+        ctrlsel = false;
+
+        // 1.全局字体操作相关,不创建则使用系统默认字体
+        RealBimOcx.CreateAGolFont("CustomFont01","黑体",true,true,14,14,32,1.0,0*64,"");
+        RealBimOcx.CreateAGolFont("CustomFont02","黑体",true,true,12,12,0,1.0,0*64,"");
+		
+		userName = RealBimOcx.GetSystemCacheInfo("AuthorityName");
+        userPass = RealBimOcx.GetSystemCacheInfo("AuthorityPass");
+        proPath = "http://116.236.104.30:8008/default.aspx?dir=url_res02&path=";
+        projName = RealBimOcx.GetSystemCacheInfo("ProjectName");
+
+        RealBimOcx.SetSystemAuthorityInfo(userName,userPass);
+        RealBimOcx.SwitchBIMSceneSimple(proPath,projName);
+        //设置模型版本信息
+        RealBimOcx.SetSceVersionInfo(100, -1);
+
+        vercmp = false;
+		
+        // 2.获取窗口像素尺寸
+        var WinWidth = RealBimOcx.GetWindowWidth();
+        // alert(WinWidth);
+        var WinHeight = RealBimOcx.GetWindowHeight();
+        // alert(WinHeight);
+
+        // 3.获取ocx控件在本地的安装路径
+        var OcxModuleDir = RealBimOcx.GetOcxModuleDir();
+        // alert(OcxModuleDir);
+        var CanonicalPath = RealBimOcx.GetResCanonicalFullPath("!(ModuleDir)");
+        // alert(CanonicalPath);
+
+        // 4.设置场景地理坐标信息(以下数据仅供参考)
+        // RealBimOcx.SetGeoCoordInfo(true);    //true为在右下角显示鼠标当前坐标，false为不显示
+        // RealBimOcx.SetGeoCoordInfo(0,true,111.95, 31.00,(112.10-111.845)/ 5183,(30.887-30.84)/ 5183,(111.80-111.845)/ 5183,(31.093-30.84)/ 5183,0); 
+    </script>
+
+    <!-- 对应说明文档――OCX控件事件+颜色设置相关+控制方式设置 -->
+    <script language="javascript"   for="RealBimOcx" EVENT="WorkCompleteNotification(CompleteEvent,retError)" type="text/javascript">
+        if(CompleteEvent == "LoadMainScene" && retError==0 ){
+                 RealBimOcx.SetAllHugeObjSubValidState(1);
+                 RealBimOcx.SetSceHugeObjVisible(true);
+
+
+                if(vercmp){
+                    if(selname == "res_versioncmp01"){
+                        RealBimOcx.SetAllSubClrInfos(32, 255, 0);
+                        RealBimOcx.SetSubArrayClrInfo("2241,2242,2243,2244",255, 255, 0xff0000ff);  //add蓝色
+                        RealBimOcx.SetSubArrayClrInfo("131,132,145,146,1362,1365,1918,1919",255, 255, 0xffffff00);     //del黄色
+                        RealBimOcx.SetSubArrayClrInfo("130,147,822,1383,1384,1385",255, 255, 0xffff0000);     //modify红色
+                    }
+                }else{
+                    RealBimOcx.SetAllSubClrInfos(255,0,0);
+                }
+
+                // 获取一个构建的包围盒信息，需传构件ID参数
+                //var HugeObjSubAABB = RealBimOcx.GetHugeObjSubAABB(137);
+                // alert(HugeObjSubAABB);
+
+                // 单构件颜色设置
+                // RealBimOcx.BatchAddSubClrInfoBegin();
+                //     RealBimOcx.AddSubClrInfo(137, 255, 255, 0xffff0000);
+                //     RealBimOcx.AddSubClrInfo(49, 255, 255, 0xff5793f3);
+                //     RealBimOcx.AddSubClrInfo(156, 255, 255, 0xff008B8B);  
+                // RealBimOcx.BatchAddSubClrInfoEnd();
+
+                // 一个构件集合整体颜色设置
+                //RealBimOcx.SetSubArrayClrInfo("123,456,789,1000",255, 255, 0xff008B8B); //构件集合仅供参考
+
+                //其他颜色设置操作参考帮助文档
+                strPosArr = new Array();
+
+                selCtrArr = new Array();
+
+                
+        }
+    </script>
+
+    <!-- 控件UI点击相关 -->
+    <script language="javascript"   for="RealBimOcx" EVENT="UIClicked(ButtonType, ButtonMode);" type="text/javascript">
+        // alert(ButtonType)
+        // 开始创建标注
+        if(ButtonType == "MARKER"){
+            RealBimOcx.CreateMarkerBegin();
+        }
+    </script>
+
+    <script language="javascript"  for="RealBimOcx" EVENT="OnCurSelModelChanged(strObjName, uObjSubID, fObjSelX, fObjSelY, fObjSelZ, fObjBVMinX,fObjBVMinY,fObjBVMinZ,  fObjBVMaxX,fObjBVMaxY,fObjBVMaxZ)" type="text/javascript">
+        // alert("strObjName : "+strObjName+"\r\n"+
+        //       "uObjSubID : "+uObjSubID+"\r\n"+
+        //       "fObjSelXYZ : "+ "<" +fObjSelX+","+fObjSelY+","+fObjSelZ+">\r\n"+
+        //       "fObjBVMinXYZ : "+ "<" +fObjBVMinX+","+fObjBVMinY+","+fObjBVMinZ+">\r\n"+
+        //       "fObjBVMaxXYZ : "+ "<" +fObjBVMaxX+","+fObjBVMaxY+","+fObjBVMaxZ+">\r\n"); 
+        if(ctrlsel){
+            selCtrArr.push(uObjSubID);
+            RealBimOcx.BatchAddSubClrInfoBegin();
+            for(var i = 0; i < selCtrArr.length; i++){
+                RealBimOcx.AddSubClrInfo(selCtrArr[i], 0x80, 0xff, 0xffffffff);    //选中构件设为半透明
+            }
+            RealBimOcx.BatchAddSubClrInfoEnd();
+        }else{
+            RealBimOcx.BatchAddSubClrInfoBegin();
+            for(var i = 0; i < selCtrArr.length; i ++){
+                RealBimOcx.AddSubClrInfo(selCtrArr[i], 0xff, 0x00, 0x00000000);    //还原之前设为半透的构件
+            }
+            RealBimOcx.BatchAddSubClrInfoEnd();
+            selCtrArr = [];
+            selCtrArr.push(uObjSubID);
+            RealBimOcx.BatchAddSubClrInfoBegin();
+                RealBimOcx.AddSubClrInfo(uObjSubID, 0x80, 0xff, 0xffffffff);    //选中构件设为半透明
+            RealBimOcx.BatchAddSubClrInfoEnd();
+        }
+
+        document.getElementById("selmodelID").value = uObjSubID;
+
+        var selPtX = fObjSelX;   var selPtY = fObjSelY;  var selPtZ = fObjSelZ;
+        var strPos = selPtX.toString()+" "+selPtY.toString()+" "+selPtZ.toString();
+
+        if(curState == addTag){
+            strPosArr.push(strPos);
+            _l = strPosArr.length;
+            for(var i = 0; i <_l; i++){
+                // 添加自定义标签
+                RealBimOcx.AddTagBegin();
+                RealBimOcx.AddTag(
+                    "tag"+i,strPosArr[i],
+                    "CustomFont01","自定义标签"+i,"70 180 150 160",0xff0000d3,76,
+                    "CustomFont02",
+"\1cf[4278190080]信息01: \1cf[4282400832]信息01\r\n\
+\1cf[4278190080]信息02: \1cf[4282400832]信息02\r\n\
+\1cf[4278190080]信息03: \1cf[4282400832]信息03\r\n\
+\1cf[4278190080]信息04: \1cf[4282400832]信息04\r\n\
+\1cf[4278190080]信息05: \1cf[4282400832]信息05",
+                    "70 160 150 140",0xff000000,76, "70 180 150 140", 0xd3d3d3d3, 0, 0xffff0000);
+                RealBimOcx.AddTagEnd();
+            }
+        }
+            
+        if(curState == "ADD_ANCHOR"){
+            // 添加系统默认锚点
+            RealBimOcx.AddAnchorBegin(0);
+            RealBimOcx.AddAnchor("anc01",selPtX,selPtY,selPtZ,0);
+            RealBimOcx.AddAnchorEnd();
+        }
+
+        if(curState == addAnc){
+            // 添加自定义锚点
+            strPosArr.push(strPos);
+            _l = strPosArr.length;
+            for(var i = 0; i <_l; i++){
+                RealBimOcx.AddAnchorBegin(0);
+                RealBimOcx.AddAnchorFlexible("anc"+i,"!(RealBIMAppFileCache)\\Picture\\anc01.png",strPosArr[i],"0 20 20 0",0xffffffff,"CustomFont01","自定义锚点"+i,"20 50 70 0",0xffffffff,0,0xff00ffff);
+                RealBimOcx.AddAnchorEnd();
+            }
+            
+        }
+    </script>
+
+    <!-- 删除单个锚点/标签 -->
+    <script language="javascript"  for="RealBimOcx" EVENT="OnAnchorSelected(SelAnchorName)" type="text/javascript">
+         if(curState = delAnc){
+            RealBimOcx.DelAnchorBegin();
+            RealBimOcx.DeleteAnchor(SelAnchorName);
+            RealBimOcx.DelAnchorEnd();
+
+            RealBimOcx.DelTagsBegin();
+            RealBimOcx.DelTag(SelAnchorName);
+            RealBimOcx.DelTagsEnd();
+        }
+    </script>
+
+    <!-- 视频录制相关 -->
+    <!-- 需安装编码器（3DApp/Codec/...inf） -->
+    <script type="text/javascript">
+        function beginVideo(){
+            alert("开始录制视频？")
+            RealBimOcx.BeginVideoEncode("!(RealBIMTempFileCache)\\Video\\videotest.avi",30,30000,0);
+        }
+        function pauseVideo(){
+            var videoEncodeEnable = RealBimOcx.IsVideoEncodeEnable();
+            var videoEncodePause = RealBimOcx.IsEncodePause();
+           
+            if(videoEncodeEnable){
+                if(videoEncodePause){
+                    alert("继续录制视频？")
+                    document.getElementById("pausevideo").value = "暂停录制";
+                    RealBimOcx.PauseOrResumeVideoEncode();
+                }else{
+                    alert("暂停录制视频？")
+                    document.getElementById("pausevideo").value = "继续录制";
+                    RealBimOcx.PauseOrResumeVideoEncode();
+                } 
+            }
+        }
+        function endVideo(){
+            alert("是否保存文件在Video文件夹？")
+            RealBimOcx.EndVideoEncode();
+        }
+
+        // 保存剖切范围内的ID
+        function saveID(){
+            var saveIDPath = RealBimOcx.GetResCanonicalFullPath("!(RealBIMTempFileCache)\\IDtest.txt")
+            alert("是否保存剖切范围内的构件ID到文件：" + saveIDPath + " ?")
+            var clipPlaneInfo = RealBimOcx.GetClipPlaneEditInfos();
+            RealBimOcx.FilterSubElemsByCurClipPlaneEditInfos(true,true,true,true,saveIDPath);
+        }
+    </script>
+</body>
+</html>
